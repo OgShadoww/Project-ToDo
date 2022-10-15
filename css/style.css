@@ -203,4 +203,11 @@ body {
   border: none;
   border-radius: 5px;
 }
+
+/* made media query for adaptive */
+@media(max-width:600px) {
+  .todo {
+    width: 70%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
