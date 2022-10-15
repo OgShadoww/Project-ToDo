@@ -162,3 +162,10 @@ body {
         border-radius: 5px;
     }
 }
+
+// made media query for adaptive 
+@media(max-width:600px) {
+    .todo {
+        width: 70%;
+    }
+}
