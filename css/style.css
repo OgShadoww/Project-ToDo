@@ -1,0 +1,206 @@
+/* import google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* null style */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* styling body */
+body {
+  font-family: 'Poppins';
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#68EACC), to(#497BE8));
+  background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+  overflow: hidden;
+}
+
+/* styling wrapper */
+.wrapper {
+  width: 100%;
+}
+
+/* styling body for todo */
+.todo {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  margin-top: 100px;
+  margin-left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 30%;
+  height: 400px;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+/* style todo title  */
+.todo__title {
+  font-size: 29px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* style todo block */
+.todo__add__task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* style todo input */
+.todo__add__task__input {
+  padding-left: 10px;
+  width: 80%;
+  height: 40px;
+  border: 1px solid #cfc1c1;
+  font-size: 15px;
+  margin-right: 10px;
+  -webkit-transition: border .4s;
+  transition: border .4s;
+}
+
+/* add style for placeholder */
+.todo__add__task__input::-webkit-input-placeholder {
+  color: #e1d6d6;
+}
+
+/* add style for placeholder */
+.todo__add__task__input:-ms-input-placeholder {
+  color: #e1d6d6;
+}
+
+/* add style for placeholder */
+.todo__add__task__input::-ms-input-placeholder {
+  color: #e1d6d6;
+}
+
+/* add style for placeholder */
+.todo__add__task__input::placeholder {
+  color: #e1d6d6;
+}
+
+/* add style for input with error */
+.todo__add__task__input.error {
+  border: 1px solid red;
+}
+
+/* style todo button for add task */
+.todo__add__task__button {
+  cursor: pointer;
+  background-color: #3f3bbe;
+  color: #fff;
+  border: none;
+  font-size: 40px;
+  width: 43px;
+  height: 42px;
+}
+
+/* style todo menu */
+.todo__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* style todo menu title */
+.todo__menu__title {
+  color: #534f4f;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* style menu item */
+.todo__menu__item {
+  width: 100%;
+  height: 40px;
+  background-color: #d3e2de;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* style menu item button */
+.todo__menu__item__button {
+  cursor: pointer;
+  height: 100%;
+  width: 40px;
+  margin-right: 10px;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transition: .4s;
+  transition: .4s;
+  margin-left: auto;
+}
+
+/* remove margin for last child */
+.todo__menu__item__button:last-child {
+  margin: 0;
+}
+
+/* style menu item button for delete  */
+.todo__menu__item__delete {
+  background-color: #ef2121;
+}
+
+/* style menu item button for finish */
+.todo__menu__item__finish {
+  background-color: #26d826;
+}
+
+/* style menu item title  */
+.todo__menu__item__title {
+  text-align: left;
+}
+
+/* style element with hover */
+.todo__menu__item:hover .todo__menu__item__button {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+/* style last element margin  */
+.todo__menu__item:last-child {
+  margin-bottom: 0;
+}
+
+/* add style for finish */
+.todo__menu__item.finish {
+  background-color: #24c524;
+}
+
+.todo .todo__clear {
+  position: sticky;
+  margin-top: 20px;
+  bottom: -10px;
+  cursor: pointer;
+  background-color: #3f3bbe;
+  padding: 15px 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=style.css.map */
