@@ -205,7 +205,7 @@ body {
 }
 
 /* made media query for adaptive */
-@media(max-width:600px) {
+@media(max-width:1000px) {
   .todo {
     width: 70%;
   }
