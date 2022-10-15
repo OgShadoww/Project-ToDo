@@ -120,6 +120,11 @@ body {
   margin-bottom: 10px;
 }
 
+.todo__menu__conteiner {
+  display: flex;
+  flex-direction: column;
+}
+
 /* style menu item */
 .todo__menu__item {
   width: 100%;

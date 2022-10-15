@@ -8,9 +8,13 @@ class ToDo {
         this.menu = this.todo.querySelector('.todo__menu')
         this.addToDo = this.todo.querySelector('.todo__add__task__button')
         this.btnClearTasks = this.todo.querySelector('.todo__clear')
-        this.menuItem = this.menu.querySelector('.todo__menu__item')
+        this.conteiner = this.menu.querySelector('.todo__menu__conteiner')
         // call main event
         this.event()
+        let item = document.createElement('div'),
+            btnDelete = document.createElement('button'),
+            btnFinish = document.createElement('button'),
+            itemTitle = document.createElement('div')
     }
 
     // add main method 
@@ -20,9 +24,6 @@ class ToDo {
             // check target of click
             if(e.target === this.addToDo) {
                 this.createTask()
-            }
-            if(e.target === this.btnClearTasks) {
-                this.clearTask()
             }
         })
 
@@ -56,7 +57,8 @@ class ToDo {
         item.append(btnFinish)
         btnDelete.textContent = '-'
         btnFinish.textContent = '+'
-        this.menu.append(item)
+        this.conteiner.append(item)
+        // this.menu.append(item)
 
         // validate input
         if(this.input.value === '') {   
@@ -68,17 +70,17 @@ class ToDo {
         
         // add event for finish task
         btnFinish.addEventListener('click', () => {
-            item.classList.toggle('finish')
+            item.classList.add('finish')
         })
-
-        // check how mutch item we have
-        if(item.lenght > 1) {
-            console.log('f')
-        }
+        btnDelete.addEventListener('click', () => {
+            item.classList.remove('finish')
+        })
+        this.btnClearTasks.addEventListener('click', () => {
+            item.remove()
+        })
     }
     // method for clear all task
     clearTask() {
-        console.log(this.menuItem)
     }
 }
 
