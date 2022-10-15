@@ -72,15 +72,22 @@ class ToDo {
         btnFinish.addEventListener('click', () => {
             item.classList.add('finish')
         })
+        // add event for remove finish
         btnDelete.addEventListener('click', () => {
             item.classList.remove('finish')
         })
+        // add event for delete all item
         this.btnClearTasks.addEventListener('click', () => {
+            // remove task from local storage
+            localStorage.removeItem('todo')
+            
             item.remove()
         })
-    }
-    // method for clear all task
-    clearTask() {
+        let arr = []
+        arr += (itemTitle.textContent)
+        console.log(arr)
+        // save task in local storage
+        localStorage.setItem('todo', JSON.stringify(` ${arr} `))
     }
 }
 
